@@ -1,0 +1,322 @@
+/**
+ * Form Reset
+ */
+ textarea, button, select, label, input {
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: auto;
+  vertical-align: middle;
+  white-space: normal;
+  line-height: inherit;
+  background: none;
+  /* Browsers have different default form fonts */
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+select, input[type=reset], input[type=button], input[type=submit], input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+}
+
+input {
+  /* Make webkit render the search input like a normal text field */
+  /* Turn off the recent search for webkit. It adds about 15px padding on the left */
+  /* Fix IE7 display bug */
+  /* These elements are usually rendered a certain way by the browser */
+}
+input:focus {
+  outline: 0;
+}
+input[type=checkbox], input[type=radio] {
+  width: 13px;
+  height: 13px;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+::-webkit-search-decoration {
+  display: none;
+}
+
+input[type=reset], input[type=button], input[type=submit] {
+  overflow: visible;
+}
+select {
+  /* Move the label to the top */
+}
+select[multiple] {
+  vertical-align: top;
+}
+
+button {
+  background: none;
+  border: 0;
+  outline: none;
+  /* IE8 and FF freak out if this rule is within another selector */
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button:hover, button:active, button:focus {
+  outline: 0;
+}
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+textarea {
+  /* Move the label to the top */
+  vertical-align: top;
+  /* Turn off scroll bars in IE unless needed */
+  overflow: auto;
+}
+
+/**
+ * Reset MIxins
+ */
+.x-contact-form__success-btn, .x-form__file-control:before, .x-form__submit, .x-contact-form__error-btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  color: #fff;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 12px;
+  font-weight: bold;
+  height: 32px;
+}
+.x-contact-form__success-btn, .x-form__file-control:before, .x-form__submit {
+  background-color: #0f63a5;
+}
+.x-contact-form__success-btn:hover, .x-form__file-control:hover:before, .x-form__submit:hover {
+  background-color: #0d558e;
+}
+.x-contact-form__error-btn {
+  border: 1px solid #ef963d;
+  color: #ef963d;
+}
+.x-contact-form__error-btn:hover {
+  background-color: #ed8925;
+  color: #fff;
+}
+
+.x-form__group {
+  display: flex;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.x-form__group > .x-form__group {
+  display: flex;
+  flex-direction: column;
+}
+.x-form__group-left, .x-form__group-right {
+  width: 100%;
+}
+.x-form__group-left {
+  margin-right: 5px;
+}
+.x-form__file-control, .x-form__group input[type=text],
+.x-form__group input[type=email],
+.x-form__group input[type=number],
+.x-form__group input[type=password],
+.x-form__group input[type=tel],
+.x-form__group select {
+  color: #656667;
+  border: 1px solid #bfbfbf;
+  font-size: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  transition: all 0.3s;
+  width: 100%;
+  min-height: 32px;
+}
+.x-form__group textarea {
+  color: #656667;
+  border: 1px solid #bfbfbf;
+  font-size: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  transition: all 0.3s;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transition: all 0.3s;
+}
+.x-form__group label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.x-form__group input[type=checkbox] {
+  margin-right: 5px;
+}
+.x-form__group input[type=radio] {
+  margin-right: 2.5px;
+}
+.x-form__checkbox-group {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+.x-form__checkbox-group label {
+  margin-bottom: 0;
+}
+.x-form__radio-group, .x-form__radio-field {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+.x-form__radio-group label, .x-form__radio-field label {
+  margin-bottom: 0;
+}
+
+.x-form__radio-group > label, .x-form__radio-field > label {
+  margin: 0px !important;
+}
+.x-form__radio-field {
+  margin-right: 10px;
+}
+.x-form__radio-field:last-child {
+  margin-right: 0;
+}
+
+/**
+ * ***************************************************************************
+ * ***************************************************************************
+ * ***************************************************************************
+ */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+a:hover {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.x-form__file {
+  cursor: pointer;
+  margin-bottom: 0 !important;
+  position: relative;
+  width: 100%;
+}
+.x-form__file-input {
+  opacity: 0;
+  height: 32px;
+  width: 100%;
+}
+.x-form__file-control {
+  left: 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.x-form__file-control:before {
+  content: attr(data-btn-name);
+  padding-left: 12px;
+  padding-right: 12px;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  z-index: 1;
+  transition: background-color 0.3s ease-out;
+}
+.x-form__file-control:after {
+  content: attr(data-file-name);
+}
+.x-contact-form__container {
+  background-color: #fff;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  padding: 12px;
+  max-width: 425px;
+  width: 100%;
+}
+.x-contact-form__title {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f63a5;
+}
+.x-contact-form__title.has--error {
+  color: #fd4949;
+}
+.x-contact-form__text {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.x-contact-form__text.has--info {
+  color: #fd4949;
+  text-align: left;
+}
+.x-contact-form__phone-ddd {
+  max-width: 70px;
+}
+.x-contact-form__send {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.x-contact-form__btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.x-contact-form__success, .x-contact-form__error {
+  display: none;
+}
